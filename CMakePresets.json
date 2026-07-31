@@ -1,0 +1,21 @@
+﻿{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "vcpkg-x64-debug",
+      "displayName": "x64 Debug con vcpkg",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "architecture": {
+        "value": "x64",
+        "strategy": "external"
+      },
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_C_COMPILER": "cl.exe",
+        "CMAKE_CXX_COMPILER": "cl.exe",
+        "CMAKE_TOOLCHAIN_FILE": "C:/Users/franc/vcpkg/scripts/buildsystems/vcpkg.cmake"
+      }
+    }
+  ]
+}
