@@ -138,7 +138,7 @@ ninja --version
 Si no aparecen, abre el _Developer Command Prompt for VS 2022_ o ejecuta:
 
 ```powershell
-& "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Launch-VsDevShell.ps1"
+& "C:\Program Files\Microsoft Visual Studio\2026\Community\Common7\Tools\Launch-VsDevShell.ps1"
 ```
 
 ---
@@ -312,7 +312,11 @@ Edita `vcpkg.json`:
     "opengl",
     {
       "name": "imgui",
-      "features": ["glfw-binding", "opengl3-binding"]
+      "features": [
+        "glfw-binding", 
+        "opengl3-binding",
+        "docking-experimental" // Para activar el Docking Experimental de ImGui (Opcional)
+      ]
     },
     "fmt",
     "spdlog"
