@@ -29,6 +29,15 @@ int main(int, char**)
     glfwMakeContextCurrent(window);
     glfwSwapInterval(1); // Activar VSync
 
+    GLFWmonitor* monitor = glfwGetPrimaryMonitor();
+    const GLFWvidmode* mode = glfwGetVideoMode(monitor);
+
+    if (mode != nullptr) {
+        int window_x = (mode->width - 1280) / 2;
+        int window_y = (mode->height - 800) / 2;
+        glfwSetWindowPos(window, window_x, window_y);
+    }
+
     // 2. Inicializar el contexto de Dear ImGui
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
